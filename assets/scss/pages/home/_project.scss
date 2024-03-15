@@ -1,0 +1,72 @@
+.about-card {
+    display: flex;
+    align-items: center;
+    .card {
+      border: none;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .left-2 {
+      .card-1 {
+        width: 500px;
+        height: 350px;
+        background-color: var(--secendory);
+        .icon {
+          text-align: right;
+          i.bx {
+            color: var(--color);
+            font-size: 70px;
+            font-weight: 500;
+            transform: rotate(220deg);
+            padding: 10px;
+          }
+        }
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          h2 {
+            color: var(--color);
+            font-size: 24px;
+            font-weight: 500;
+          }
+          .card-content {
+            display: flex;
+            align-items: center;
+            .content {
+              margin-right: 20px;
+              p {
+                color: var(--color-subtle);
+                opacity: 0.8;
+                font-size: var(--font-size);
+              }
+              h5 {
+                font-size: var(--font-size);
+                font-weight: 400;
+                color: var(--color);
+              }
+            }
+          }
+        }
+      }
+      .card-2 {
+        width: 500px;
+        height: 600px;
+        background-image: url("https://i.pinimg.com/736x/b4/c9/54/b4c9543ab12799e283b96754872a1f7e.jpg");
+      }
+    }
+    .right-2 {
+      .card-1 {
+        width: 500px;
+        height: 350px;
+        background-image: url("https://img.freepik.com/free-vector/website-development-banner_33099-1687.jpg?size=626&ext=jpg&ga=GA1.1.1292351815.1710201600&semt=ais");
+      }
+      .card-2 {
+        width: 500px;
+        height: 600px;
+        background-image: url("https://i.pinimg.com/736x/ab/10/d6/ab10d644d3d270e8121ad01d2a5f6ac9.jpg");
+      }
+    }
+  }
+  

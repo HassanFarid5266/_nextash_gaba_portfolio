@@ -1,0 +1,45 @@
+.services {
+    .services-body {
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      margin: 30px 0;
+      padding: 10px 0;
+      .number {
+        width: 6%;
+        h5 {
+          color: var(--text);
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+      .content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .content-body {
+          width: 40%;
+          h2 {
+            font-size: 30px;
+            font-weight: 600;
+          }
+          p {
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--light);
+          }
+        }
+  
+        .icon {
+          width: 50%;
+          text-align: right;
+          i.bx {
+            color: var(--text);
+            font-size: 70px;
+            font-weight: 500;
+            transform: rotate(315deg);
+          }
+        }
+      }
+    }
+  }

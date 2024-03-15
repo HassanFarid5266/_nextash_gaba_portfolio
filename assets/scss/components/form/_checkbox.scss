@@ -1,0 +1,123 @@
+.checkbox {
+    --checkbox-active-bg: var(--primary);
+    --checkbox-active-color: white;
+    --checkbox-rounded: var(--rounded);
+    --checkbox-border: var(--dark);
+    --checkbox-bg: transparent;
+    --checkbox-bg-hover: var(--light);
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 2.5rem;
+    margin: 1rem 0;
+  
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+  
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 28px;
+      width: 28px;
+      background-color: var(--checkbox-bg);
+      border-radius: var(--checkbox-rounded);
+      box-shadow: inset var(--checkbox-border) 0px 0px 0px 2px;
+  
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 10px;
+        top: 4px;
+        width: 8px;
+        height: 15px;
+        border: solid var(--checkbox-active-color);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+    .text {
+      position: relative;
+      top: 5px;
+      color: var(--text);
+      font-size: var(--font-size);
+      font-weight: 500;
+    }
+    b.text {
+      font-weight: 600;
+    }
+    .count {
+      float: right;
+    }
+  
+    &:hover input ~ .checkmark {
+      background-color: var(--checkbox-bg-hover);
+    }
+  
+    & input:checked ~ .checkmark {
+      background-color: var(--checkbox-active-bg);
+      box-shadow: inset var(--checkbox-active-bg) 0px 0px 0px 2px;
+    }
+  
+    & input:focus ~ .checkmark {
+      box-shadow: inset var(--checkbox-active-bg) 0px 0px 0px 2px;
+    }
+  
+    & input:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+  
+  .radio {
+    --checkbox-rounded: 50px;
+  }
+  
+  .btn-radio {
+    --btn-radio-bg: var(--color);
+    --btn-radio-hover: var(--light);
+    --btn-radio-border: var(--border);
+    --btn-active: var(--color);
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem 1rem;
+    background-color: var(--btn-radio-bg);
+    border: 1px solid var(--btn-radio-border);
+    border-radius: var(--rounded);
+    cursor: pointer;
+    padding-right: 2rem;
+  
+    input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+  
+    &:hover,
+    &:focus {
+      background-color: var(--btn-radio-hover);
+      box-shadow: inset var(--dark) 0px 0px 0px 2px;
+    }
+  
+    &::after {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 15px;
+      height: 15px;
+      background-color: var(--btn-radio-bg);
+      border-radius: 50px;
+      content: "";
+      border: 1px solid var(--btn-radio-border);
+    }
+  }
+  
+  .btn-radio input[type="radio"]:checked + .btn-radio::after {
+    --btn-active: var(--primary);
+  }
+  

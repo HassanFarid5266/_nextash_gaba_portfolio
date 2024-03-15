@@ -1,0 +1,19 @@
+.badge {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5rem;
+  border: 2px solid var(--primary);
+  &:hover {
+    border: 2px solid var(--dark);
+    color: var(--dark);
+  }
+}
+
+.badges-group{
+  margin-bottom: 20px;
+}

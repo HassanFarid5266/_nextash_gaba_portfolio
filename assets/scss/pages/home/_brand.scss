@@ -1,0 +1,19 @@
+.boxed {
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+      .brand-img {
+        img {
+          width: 150px;
+          opacity: 0.3;
+          transition: all 0.4s;
+          user-select: none;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,60 @@
+.collapsible {
+  margin-bottom: 2rem;
+
+  .collapse-item {
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    user-select: none;
+
+    &.active {
+      .collapse-head {
+        color: var(--primary);
+      }
+
+      .collapse-body {
+        display: block;
+      }
+
+      &::after {
+        content: "\ebc1";
+        transform: rotate(90deg);
+        color: var(--primary);
+      }
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    &::after {
+      content: "\eb8d";
+      font-family: "icons";
+      font-size: 1.8rem;
+      transition: 0.5s transform;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    .collapse-head {
+      padding: 1rem 0;
+      cursor: pointer;
+      font-weight: bold;
+      color: var(--text);
+      font-size: 1rem;
+      padding-right: 3rem;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      width: 100%;
+      text-align: left;
+    }
+
+    .collapse-body {
+      padding: 1rem 0;
+      display: none;
+      color: var(--text);
+      font-size: 1rem;
+    }
+  }
+}
